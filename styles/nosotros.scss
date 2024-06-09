@@ -1,0 +1,14 @@
+@import "fuentes";
+
+@include nav;
+
+@include titulos;
+
+pre {
+    @include pre
+}
+
+.imagen-centrada {
+    display: block;
+    margin: 0 auto;
+}

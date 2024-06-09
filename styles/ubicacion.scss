@@ -1,0 +1,14 @@
+@import "fuentes";
+
+@include nav;
+
+pre {
+    @include pre;
+}
+
+@include titulos;
+
+#mapa {
+    display: flex;
+    justify-content: center;
+}
