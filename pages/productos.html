@@ -33,18 +33,31 @@
                 <a class="nav-link" href="./ubicacion.html">UBICACION</a>
             </li>
             </ul>
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="PRODUCTOS" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+            <form class="d-flex" role="search" onsubmit="buscarProducto(event)">
+                <input class="form-control me-2" type="search" id="busquedaInput" placeholder="PRODUCTOS" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">BUSCAR</button>
             </form>
+
         </div>
         </div>
-    </nav>
+</nav>
 <!-- FIN DE NAV -->
-
+<!-- CARRITO INICIO -->
+<header id="header">
+    <h1>carrito compra</h1>
+    <img class="carrito" src="../img/carrito.webp" alt="carrito">
+</header>
+<div class="contenedor-carrito" id="contenedor-carrito">
+    <div class="informacion">
+        <p></p>
+        <p class="precio"><span></span></p>
+    </div>
+</div>
+<!-- CARRITO FIN -->
+<div id="resultadosBusqueda">
 <main id="contenedor">
-
 </main>
+</div>
 <!-- INICIO DE SCRIPS -->
 <script src="../productos/stok.js"></script>
 <script src="../productos/App.js"></script>
