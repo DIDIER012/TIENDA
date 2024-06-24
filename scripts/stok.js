@@ -38,9 +38,81 @@ const productos = [
         img: '../img/BUZO 1.webp',
         cantidad:1
     },
-
     {
         id: 5,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 2.webp',
+        cantidad:1
+    },
+    {
+        id: 6,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 3.webp',
+        cantidad:1
+    },
+    {
+        id: 7,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/buzo 4.webp',
+        cantidad:1
+    },
+    {
+        id: 8,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 5.webp',
+        cantidad:1
+    },
+    {
+        id: 9,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 6.webp',
+        cantidad:1
+    },
+    {
+        id: 9,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 7.webp',
+        cantidad:1
+    },
+    {
+        id: 9,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/2241108028-10_1.webp',
+        cantidad:1
+    },
+    {
+        id: 10,
+        nombre: "Buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
+        precio: 50000,
+        img: '../img/BUZO 4.webp',
+        cantidad:1
+    },
+
+    {
+        id: 11,
         nombre: "remera",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
@@ -50,7 +122,7 @@ const productos = [
     },
 
     {
-        id: 6,
+        id: 12,
         nombre: "remera",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
@@ -60,7 +132,7 @@ const productos = [
     },
 
     {
-        id: 7,
+        id: 13,
         nombre: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
@@ -70,7 +142,7 @@ const productos = [
     },
 
     {
-        id: 8,
+        id: 14,
         nombre: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",
@@ -80,7 +152,7 @@ const productos = [
     },
     
     {
-        id: 9,
+        id: 15,
         nombre: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL, para que encuentres el ajuste perfecto que se adapte a tu estilo y comodidad. ¡Atrévete a destacar con nuestro buzo oversize y conquista cualquier ocasión con un toque de tendencia!",

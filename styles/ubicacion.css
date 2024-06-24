@@ -66,4 +66,8 @@ h2 {
 #mapa {
   display: flex;
   justify-content: center;
+}
+
+#direccion {
+  margin: 40px;
 }/*# sourceMappingURL=ubicacion.css.map */

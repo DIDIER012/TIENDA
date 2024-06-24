@@ -61,7 +61,21 @@ a {
   color: gold;
 }
 
+a:hover {
+  color: violet;
+  transition: 0.9s;
+  scale: 1.3;
+}
+
 img {
   width: 800px;
   height: 500px;
+}
+
+#carouselExampleFade {
+  margin: 60px;
+}
+
+#envios {
+  margin: 60px;
 }/*# sourceMappingURL=style.css.map */

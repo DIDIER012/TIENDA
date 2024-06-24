@@ -49,7 +49,9 @@ function mostrarResultados(resultados) {
         resultadosDiv.innerHTML = "No se encontraron resultados.";
     } else {
         resultados.forEach(producto => {
+            const cardDiv = document.createElement("div");
             const card = `
+            <div class="card-image">
                 <div class="card" style="width: 20rem;">
                     <img src="${producto.img}" class="card-img-top" alt="Producto">
                     <div class="card-body text-center">
@@ -57,10 +59,16 @@ function mostrarResultados(resultados) {
                         <p class="card-text">$ ${producto.precio}</p>
                         <a href="#" class="btn btn-primary agregar" id = "agregar">AGREGAR AL CARRITO</a>
                     </div>
+                    </div>
                 </div>`;
-            const cardDiv = document.createElement("div");
             cardDiv.innerHTML = card;
             resultadosDiv.appendChild(cardDiv);
         });
     };
 };
+
+
+
+//  CARRITO DE COMPRAS 
+
+console.log("hola mundo")
