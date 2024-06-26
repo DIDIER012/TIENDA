@@ -13,7 +13,7 @@ const fijarProductos = () => {
         <div class="card-body text-center">
             <p class="card-text ">${producto.desc}</p>
             <p class="card-text ">$ ${producto.precio}</p>
-            <a href="#" class="btn btn-primary agregar" id = "agregar">AGREGAR AL CARRITO</a>
+            <a href="#" class="btn btn-primary agregar">AGREGAR AL CARRITO</a>
         </div>
         </div>
         </div>`
@@ -35,7 +35,7 @@ function buscarProducto(event) {
     const valorBusqueda = busquedaInput.value.toLowerCase();
 
     const resultados = productos.filter(producto =>
-        producto.nombre.toLowerCase().includes(valorBusqueda)
+        producto.titulo.toLowerCase().includes(valorBusqueda)
     );
 
     mostrarResultados(resultados);
@@ -57,7 +57,7 @@ function mostrarResultados(resultados) {
                     <div class="card-body text-center">
                         <p class="card-text">${producto.desc}</p>
                         <p class="card-text">$ ${producto.precio}</p>
-                        <a href="#" class="btn btn-primary agregar" id = "agregar">AGREGAR AL CARRITO</a>
+                        <a href="#" class="btn btn-primary agregar">AGREGAR AL CARRITO</a>
                     </div>
                     </div>
                 </div>`;
@@ -67,8 +67,3 @@ function mostrarResultados(resultados) {
     };
 };
 
-
-
-//  CARRITO DE COMPRAS 
-
-console.log("hola mundo")

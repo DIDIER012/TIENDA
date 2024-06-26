@@ -76,7 +76,7 @@ span {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 15px;
   height: 70px;
   top: 0;
@@ -123,7 +123,7 @@ header {
 .cart-pruduct {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -178,4 +178,9 @@ header {
 
 .hidden-cart {
   display: none;
+}
+
+.parrafoCarrito {
+  padding: 20px;
+  text-align: center;
 }/*# sourceMappingURL=productos.css.map */
