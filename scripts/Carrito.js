@@ -7,7 +7,7 @@ btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
 
-const info = document.querySelector(".cart-pruduct");
+const infoProduct = document.querySelector(".cart-pruduct");
 const mostrar = document.querySelector("#mostrarCarrito");
 
 const productsList = document.querySelector("#contenedor");
@@ -15,31 +15,32 @@ const productsList = document.querySelector("#contenedor");
 let allProducts = [];
 
 productsList.addEventListener("click", (evento) => {
+	
 
 	if (evento.target.classList.contains('agregar')) {
-		const product = evento.target.parentElement;
+		const productos = window.productos;
 
 		const infoProduct = {
 			cantidad: 1,
-			titulo: infoProduct.titulo,
 			titulo: productos.titulo,
-			precio: infoProduct.precio,
+			precio: productos.precio,
 		}
 		console.log(infoProduct)
+		
 
-		const existencias = allProducts.some(product => product.titulo  === infoProduct.titulo)
+		const existencias = allProducts.some(productos => productos.titulo  === infoProduct.titulo)
 
 		if (existencias) {
-			const products = allProducts.map(product => {
-				if (product.titulo === infoProduct.titulo){
-					product.cantidad++
-					return product
+			const productos = allProducts.map(productos => {
+				if (productos.titulo === infoProduct.titulo){
+					productos.cantidad++
+					return productos
 				} else {
-					return product
+					return productos
 				}
 			})
 
-			allProducts = [...products]
+			allProducts = [...productos]
 		}else {
 			allProducts = [...allProducts, infoProduct]
 		}
@@ -49,38 +50,39 @@ productsList.addEventListener("click", (evento) => {
 
 mostrar.addEventListener("click", (e) => {
     if(e.target.classList.contains("icon-close")){
-		const product = e.target.parentElement
+		const productos = e.target.parentElement
 
-		const titulo = infoProduct.titulo
+		const titulo = productos.titulo
 
-		allProducts = allProducts.filter(product => product.titulo !== titulo);
+		allProducts = allProducts.filter(productos => productos.titulo !== titulo);
 
 		mostrarCarrito();
 	}
 })
 
 mostrarCarrito = () => {
-	if(!allProducts.length){
-		containerCartProducts.innerHTML =
-		`<p class= "parrafoCarrito></p>"`
-
+	if (!allProducts.length) {
+		const mostrar1 = document.querySelector('.container-cart-products');
+		mostrar1.innerHTML =
+			`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
 	}
-mostrarCarrito.innerHTML = "";
+
+	mostrarCarrito.innerHTML = "";
 
 let total = 0;
 let totalProducts = 0;
 
 
-allProducts.forEach(product => {
+allProducts.forEach(productos => {
 const show = document.createElement("div")
 show.classList.add("cart-product")
 
 
 show.innerHTML = 
 		`<div class="info-cart-product">
-			<span class="cantindad-producto-carrito">${product.cantidad}</span>
-			<p class="titulo-producto-carrito">${product.titulo}</p>
-			<span class="precio-producto-carrito">${product.precio}</span>
+			<span class="cantindad-producto-carrito">${productos.cantidad}</span>
+			<p class="titulo-producto-carrito">${productos.titulo}</p>
+			<span class="precio-producto-carrito">${productos.precio}</span>
 		</div>
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
 		<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -88,8 +90,8 @@ show.innerHTML =
 
 	mostrar.appendChild(show);
 
-	total = total + parseInt(product.cantidad * product.precio.slice(1));
-	totalProducts = totalProducts + product.cantidad
+	total = total + parseInt(productos.cantidad * productos.precio);
+	totalProducts = totalProducts + productos.cantidad
 });
 
 const valorTotal = document.querySelector(".total-pagar");
@@ -98,6 +100,4 @@ const contador = document.querySelector("#contador-productos");
 valorTotal.innerText = `$${total}`
 contador.innerText = totalProducts
 
-}
-
-
+};
