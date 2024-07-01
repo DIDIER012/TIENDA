@@ -150,13 +150,13 @@ header {
 }
 
 .precio-producto-carrito {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 20px;
   margin-left: 10px;
 }
 
 .cantindad-producto-carrito {
-  font-weight: 400;
+  font-weight: 900;
   font-size: 20px;
 }
 
@@ -200,4 +200,10 @@ header {
 .parrafoCarrito {
   padding: 20px;
   text-align: center;
+}
+
+.total-pagar {
+  font-weight: bolder;
+  color: #000;
+  font-size: 20px;
 }/*# sourceMappingURL=productos.css.map */
