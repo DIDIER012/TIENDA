@@ -17,14 +17,11 @@ const fijarProductos = () => {
         </div>
         </div>
         </div>`
-        
         contenedor.appendChild(div);
     });
 };
 
-
 fijarProductos();
-
 
 // BUSCADOR DE PRODUCTOS
 
@@ -42,7 +39,7 @@ function buscarProducto(event) {
 }
 
 function mostrarResultados(resultados) {
-    const resultadosDiv = document.getElementById("resultadosBusqueda");
+    const resultadosDiv = document.getElementById("contenedor");
     resultadosDiv.innerHTML = "";
 
     if (resultados.length === 0) {
@@ -61,9 +58,9 @@ function mostrarResultados(resultados) {
                     </div>
                     </div>
                 </div>`;
+                
             cardDiv.innerHTML = card;
             resultadosDiv.appendChild(cardDiv);
         });
     };
 };
-

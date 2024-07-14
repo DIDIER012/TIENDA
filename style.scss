@@ -1,41 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import"styles/fuentes";
 
-.navbar{
-    background-color: gray;
-    font-family: font1;
-}   
-.navbar-brand{
-    font-size: 45px;
-    font-weight: bold;
-}
+@include nav;
 
-span{
-    color: gold;
-}
+@include titulos1;
 
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    font-size: 55px;
-}
-
-.nav-item {
-    margin-right: 10px;
-    font-size: 35px;
-    font-weight: bolder;
-}
-
-.nav-link:hover{
-    scale: 1.2;
-    color: gold;
-    transition: 0.9s;
-}
-
+@include media;
 
 .redes {
     font-size: 35px;
@@ -49,12 +18,7 @@ span{
 }
 
 pre {
-    width: 80%;
-    white-space: pre-wrap;
-    margin: 0 auto;
-    overflow-wrap: break-word;
-    margin-top: 4%;
-    font-size: 20px;
+    @include pre;
 }
 
 a {
@@ -72,10 +36,46 @@ img{
     height: 500px;
 }
 
+.mas:hover:hover{
+    scale: 1.20;
+    transition: 0.9s;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.contactos{
+    font-size: 45px;
+    font-weight: bolder;
+}
+
 #carouselExampleFade {
     margin: 60px;
 }
 
 #envios {
     margin: 60px;
+}
+
+
+
+@media (max-width: 900px) {
+    .carousel img {
+        max-width: 100%; 
+        height: auto; 
+    }
 }

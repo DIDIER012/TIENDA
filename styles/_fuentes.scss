@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Space+Grotesk:wght@300..700&display=swap');
 
-$font1: "Seymour One", sans-serif;
+$font1: "Space Grotesk", sans-serif;
+
 
 @mixin nav {
     *{
@@ -11,7 +12,6 @@ $font1: "Seymour One", sans-serif;
 
 .navbar{
     background-color: gray;
-    font-family: font1;
     display: flex;
     justify-content: space-between;
 }
@@ -49,16 +49,17 @@ span {
 }
 
 
-@mixin titulos {
+@mixin titulos1 {
     h1 {
         margin-top: 20px;
         font-size: 45px;
         font-weight: bold;
+        font-family: $font1;
     }
     
     h2 {
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 35px;
+        font-weight: bolder;
         margin-top: 30px;
     }
 }
@@ -70,4 +71,29 @@ span {
     overflow-wrap: break-word;
     margin-top: 4%;
     font-size: 20px;
+}
+
+@mixin media {
+    @media (max-width: 500px) {
+        .navbar-nav { 
+            display: flex;
+            flex-direction: column;}
+    
+            .navbar-brand{
+                font-size: 30px;
+                font-weight: bold;
+                margin-left: 15px;
+            }
+        
+        .nav-item {
+            font-size: 20px;
+        }
+    }
+    
+    @media (max-width: 1500px) {
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+        }
+        }
 }

@@ -1,14 +1,9 @@
-// LOCAL STORAGE
+// LOCAL STORAGE  ///////////////////////////////////////////////////////////////////////
 const carritoStorage = () => {
 	localStorage.setItem('carritoArray', JSON.stringify(allProducts));
+	
 }
-// const guardarProductosEnLocalStorage = () => {
-//     localStorage.setItem('carritoProductos', JSON.stringify(allProducts));
-// }
-
-
-
-//LOCAL
+/////////////////////////////////////////////////////////////////////////////////////////
 const btnCart = document.querySelector('#carritoHidden');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
@@ -17,7 +12,6 @@ const containerCartProducts = document.querySelector(
 btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
-
 const cartInfo = document.querySelector(".cart-pruduct");
 const mostrar = document.querySelector("#mostrarCarrito");
 const productsList = document.querySelector("#contenedor");
@@ -25,7 +19,9 @@ const productsList = document.querySelector("#contenedor");
 
 
 let allProducts = [];
-console.log(allProducts)
+console.log(allProducts);
+
+
 
 const valorTotal = document.querySelector(".total-pagar");
 const contador = document.querySelector("#contador-productos");
@@ -33,20 +29,19 @@ const contador = document.querySelector("#contador-productos");
 
 
 productsList.addEventListener("click", (evento) => {
-
 	if (evento.target.classList.contains('agregar')) {
 
 		const productId = evento.target.id
 		const productoArray = productos.find(producto => producto.id == productId);
-
+		console.log(productoArray);
+		
 		const infoProduct = {
 			id: productId,
 			precio: productoArray.precio,
             tipo: productoArray.tipo,
 			cantidad: 1
 		}
-		mostrarCarrito();
-		const existencias = allProducts.some(allProducts => allProducts.id  === infoProduct.id)
+		const existencias = allProducts.some(product => product.id  === infoProduct.id)
 
 if (existencias) {
 	const allProduct = allProducts.map(allProducts => {
@@ -59,19 +54,16 @@ if (existencias) {
 });
 } else {
 	allProducts = [...allProducts, infoProduct];
-}
-
-mostrarCarrito();
-		
-	}
+}};
+	mostrarCarrito();
 });
 
 mostrar.addEventListener("click", (e) => {
     if (e.target.classList.contains("icon-close")) {
         const closeProductId = e.target.id;
-        console.log(closeProductId);
 
         allProducts = allProducts.filter(producto => producto.id !== closeProductId);
+		console.log(allProducts)
         
         mostrarCarrito();
     }
@@ -79,12 +71,12 @@ mostrar.addEventListener("click", (e) => {
 
 
 mostrarCarrito = () => {
-	
 	// if (!allProducts.length) {
 	// 	containerCartProducts.innerHTML =
 	// 		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
+	// 			console.log(allProducts);
 	// }
-	// console.log(!allProducts.length)
+
 	mostrar.innerHTML = "";
 
 let total = 0;
@@ -136,3 +128,4 @@ window.addEventListener('DOMContentLoaded', () => {
         mostrarCarrito();
     }
 });
+

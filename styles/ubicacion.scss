@@ -2,11 +2,13 @@
 
 @include nav;
 
+
+
 pre {
     @include pre;
 }
 
-@include titulos;
+@include titulos1;
 
 #mapa {
     display: flex;

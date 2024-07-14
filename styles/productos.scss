@@ -1,8 +1,6 @@
 @import "fuentes";
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$font1: "Prompt", sans-serif; 
-
+@include titulos1;
 
 .navbar{
     background-color: gray;
@@ -47,7 +45,7 @@ span {
 #contenedor {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
+    gap: 50px;
     padding: 15px;
     margin-right: 10px;
     margin-left: 10px;
@@ -55,14 +53,6 @@ span {
     margin-bottom: auto;
 }
 
-#resultadosBusqueda {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-}
 
 .card-img-top{
     width: auto;
@@ -141,6 +131,7 @@ header {
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+    padding: 10px;
 }
 
 .cart-pruduct{
@@ -153,18 +144,22 @@ header {
 
 
 .titulo-producto-carrito{
+    margin-top: 10px;
     font-size: 20px;
+    font-weight: bolder;
 }
 
 .precio-producto-carrito{
-    font-weight: 700;
+    margin-top: 10px;
+    font-weight: bolder;
     font-size: 20px;
     margin-left: 10px;
 }
 
 
 .cantindad-producto-carrito{
-    font-weight: 400;
+    margin-top: 10px;
+    font-weight: bolder;
     font-size: 20px;
 }
 .info-cart-product{
@@ -174,6 +169,7 @@ header {
 }
 
 .icon-close{
+    margin-top: 10px;
     width: 25px;
     height: 25px;
 }
@@ -192,6 +188,7 @@ header {
 }
 
 .cart-total h3 {
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -214,3 +211,47 @@ header {
     color: #000;
     font-size: 20px;
 }
+
+
+
+// MEDIA QUERYS
+@media (max-width: 1500px) {
+    #contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 20px;
+        grid-auto-columns: auto;
+        gap: 100px;
+    }
+
+    .navbar-brand{
+        margin-left: 40px;
+    }
+
+    .navbar-nav {
+        margin-left: 110px;
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    #contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+        grid-auto-columns: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    #contenedor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+        grid-auto-columns: auto;
+    }
+}
+
+
