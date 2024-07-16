@@ -1,3 +1,8 @@
+// JSON ///////////////////////////////////////////////////////////////////////////////
+fetch("../apis/stoks.json")
+    .then(response => response.json())
+	.then(data => {
+        const productos = data;
 
 const fijarProductos = () => {
     const contenedor = document.querySelector("#contenedor");
@@ -22,9 +27,9 @@ const fijarProductos = () => {
 };
 
 fijarProductos();
-
+    })
+///////////////////////////////////////////////////////////////////////////////////////
 // BUSCADOR DE PRODUCTOS
-
 function buscarProducto(event) {
     event.preventDefault();
 

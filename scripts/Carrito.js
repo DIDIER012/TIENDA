@@ -1,9 +1,9 @@
-// LOCAL STORAGE  ///////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////// LOCAL STORAGE  ///////////////////////////////////////////////////////////////////////
 const carritoStorage = () => {
 	localStorage.setItem('carritoArray', JSON.stringify(allProducts));
 	
 }
-/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const btnCart = document.querySelector('#carritoHidden');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
@@ -15,25 +15,18 @@ btnCart.addEventListener('click', () => {
 const cartInfo = document.querySelector(".cart-pruduct");
 const mostrar = document.querySelector("#mostrarCarrito");
 const productsList = document.querySelector("#contenedor");
-
-
-
-let allProducts = [];
-console.log(allProducts);
-
-
-
 const valorTotal = document.querySelector(".total-pagar");
 const contador = document.querySelector("#contador-productos");
 
 
 
+let allProducts = [];
+
+
 productsList.addEventListener("click", (evento) => {
 	if (evento.target.classList.contains('agregar')) {
-
 		const productId = evento.target.id
 		const productoArray = productos.find(producto => producto.id == productId);
-		console.log(productoArray);
 		
 		const infoProduct = {
 			id: productId,
@@ -43,19 +36,19 @@ productsList.addEventListener("click", (evento) => {
 		}
 		const existencias = allProducts.some(product => product.id  === infoProduct.id)
 
-if (existencias) {
-	const allProduct = allProducts.map(allProducts => {
-    if (allProducts.id === infoProduct.id) {
-    allProducts.cantidad++;
-    } else {
-		return allProducts;
-	}
-    
-});
-} else {
-	allProducts = [...allProducts, infoProduct];
-}};
+		if (existencias) {  
+            allProducts.forEach(product => {  
+                if (product.id === infoProduct.id) {  
+                    product.cantidad++;  
+                }  
+            });  
+        } else {  
+            allProducts.push(infoProduct);  
+        }  
 	mostrarCarrito();
+	
+	
+	};
 });
 
 mostrar.addEventListener("click", (e) => {
@@ -71,11 +64,11 @@ mostrar.addEventListener("click", (e) => {
 
 
 mostrarCarrito = () => {
-	// if (!allProducts.length) {
-	// 	containerCartProducts.innerHTML =
-	// 		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
-	// 			console.log(allProducts);
-	// }
+// if (!allProducts.length) {
+// 	containerCartProducts.innerHTML =
+// 		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
+// 			console.log(allProducts);
+// }
 
 	mostrar.innerHTML = "";
 
@@ -120,7 +113,6 @@ contador.innerText = totalProducts
 carritoStorage();
 };
 
-
 window.addEventListener('DOMContentLoaded', () => {
     const carritoStorage = localStorage.getItem('carritoArray');
     if (carritoStorage) {
@@ -128,4 +120,3 @@ window.addEventListener('DOMContentLoaded', () => {
         mostrarCarrito();
     }
 });
-
