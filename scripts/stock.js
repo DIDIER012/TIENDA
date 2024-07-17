@@ -35,9 +35,10 @@ const productos = [
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
-        img: '../img/buzo2n.webp',
+        img: '../img/2.jpg',
         cantidad: 1
     },
+
     {
         id: 5,
         titulo: "Buzo",
@@ -47,6 +48,7 @@ const productos = [
         img: '../img/buzo3n.webp',
         cantidad: 1
     },
+
     {
         id: 6,
         titulo: "Buzo",
@@ -56,6 +58,7 @@ const productos = [
         img: '../img/buzo 3.webp',
         cantidad: 1
     },
+
     {
         id: 7,
         titulo: "Buzo",
@@ -65,6 +68,7 @@ const productos = [
         img: '../img/buzo 4.webp',
         cantidad: 1
     },
+
     {
         id: 8,
         titulo: "Buzo",
@@ -74,6 +78,7 @@ const productos = [
         img: '../img/buzo 5.webp',
         cantidad: 1
     },
+
     {
         id: 9,
         titulo: "Buzo",
@@ -83,6 +88,7 @@ const productos = [
         img: '../img/buzo 6.webp',
         cantidad: 1
     },
+
     {
         id: 10,
         titulo: "Buzo",
@@ -92,6 +98,7 @@ const productos = [
         img: '../img/buzo 7.webp',
         cantidad: 1
     },
+
     {
         id: 11,
         titulo: "Buzo",
@@ -101,6 +108,7 @@ const productos = [
         img: '../img/2241108028-10_1.webp',
         cantidad: 1
     },
+    
     {
         id: 12,
         titulo: "Buzo",
