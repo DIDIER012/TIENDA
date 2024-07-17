@@ -4,6 +4,8 @@ const carritoStorage = () => {
 	
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const btnCart = document.querySelector('#carritoHidden');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
@@ -54,26 +56,41 @@ productsList.addEventListener("click", (evento) => {
 mostrar.addEventListener("click", (e) => {
     if (e.target.classList.contains("icon-close")) {
         const closeProductId = e.target.id;
-
+		console.log(closeProductId)
         allProducts = allProducts.filter(producto => producto.id !== closeProductId);
-		console.log(allProducts)
-        
         mostrarCarrito();
     }
 });
 
 
 mostrarCarrito = () => {
-// if (!allProducts.length) {
-// 	containerCartProducts.innerHTML =
-// 		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
-// 			console.log(allProducts);
-// }
+	if (!allProducts.length) {
+		containerCartProducts.innerHTML =
+		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
+		console.log(allProducts);
+	}
 
-	mostrar.innerHTML = "";
+mostrar.innerHTML = "";
 
 let total = 0;
 let totalProducts = 0;
+
+
+Toastify({
+	text: "AGREGASTE UN NUEVO PRODUCTO",
+	duration: 1000,
+	newWindow: true,
+	close: true,
+	gravity: "top",
+	position: "right",
+	stopOnFocus: true, 
+	style: {
+	background: "linear-gradient(to right, #00b09b, #96c93d)",
+	},
+	onClick: function(){}
+}).showToast();
+
+
 
 
 allProducts.forEach(infoProduct => {
@@ -82,30 +99,30 @@ containerProducts.classList.add("cart-product")
 
 
 containerProducts.innerHTML = 
-		`<div class="info-cart-product">
-			<span class="cantindad-producto-carrito">${infoProduct.cantidad}</span>
-			<p class="titulo-producto-carrito">${infoProduct.tipo}</p>
-			<span class="precio-producto-carrito">${infoProduct.precio}</span>
-		
-		<svg xmlns="http://www.w3.org/2000/svg" 
-		fill="none" 
-		viewBox="0 0 24 24" 
-		stroke-width="1.5" 
-		stroke="currentColor" 
-		class="icon-close" id = ${infoProduct.id}>
-		<path 
-			stroke-linecap="round" 
-			stroke-linejoin="round" 
-			d="M6 18 18 6M6 6l12 12" 
-			/>
-		</svg>
-		</div>
-		`
+	`<div class="info-cart-product">
+		<span class="cantindad-producto-carrito">${infoProduct.cantidad}</span>
+		<p class="titulo-producto-carrito">${infoProduct.tipo}</p>
+		<span class="precio-producto-carrito">${infoProduct.precio}</span>
+	
+	<svg xmlns="http://www.w3.org/2000/svg" 
+	fill="none" 
+	viewBox="0 0 24 24" 
+	stroke-width="1.5" 
+	stroke="currentColor" 
+	class="icon-close" id = ${infoProduct.id}>
+	<path 
+		stroke-linecap="round" 
+		stroke-linejoin="round" 
+		d="M6 18 18 6M6 6l12 12" 
+		/>
+	</svg>
+	</div>
+	`
 
-	mostrar.append(containerProducts);
+mostrar.append(containerProducts);
 
-	total = total + parseInt(infoProduct.cantidad * infoProduct.precio);
-	totalProducts = totalProducts + infoProduct.cantidad
+total = total + parseInt(infoProduct.cantidad * infoProduct.precio);
+totalProducts = totalProducts + infoProduct.cantidad
 });
 
 valorTotal.innerText = `TOTAL $${total}`

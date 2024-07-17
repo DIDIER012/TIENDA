@@ -226,12 +226,6 @@ header {
     grid-auto-columns: auto;
     gap: 100px;
   }
-  .navbar-brand {
-    margin-left: 40px;
-  }
-  .navbar-nav {
-    margin-left: 110px;
-  }
 }
 @media (max-width: 1200px) {
   #contenedor {
@@ -247,5 +241,23 @@ header {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 20px;
     grid-auto-columns: auto;
+  }
+}
+@media (max-width: 500px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=productos.css.map */

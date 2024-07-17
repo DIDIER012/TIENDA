@@ -18,7 +18,7 @@ const fijarProductos = () => {
         <div class="card-body text-center">
             <p class="card-text ">${producto.desc}</p>
             <p class="card-text ">$ ${producto.precio}</p>
-            <a href="#" class="btn btn-primary agregar" id = ${producto.id}>AGREGAR AL CARRITO</a>
+            <a class="btn btn-primary agregar" id = ${producto.id}>AGREGAR AL CARRITO</a>
         </div>
         </div>
         </div>`
@@ -59,7 +59,7 @@ function mostrarResultados(resultados) {
                     <div class="card-body text-center">
                         <p class="card-text">${producto.desc}</p>
                         <p class="card-text">$ ${producto.precio}</p>
-                        <a href="#" class="btn btn-primary agregar" id = ${producto.id}>AGREGAR AL CARRITO</a>
+                        <a class="btn btn-primary agregar" id = ${producto.id}>AGREGAR AL CARRITO</a>
                     </div>
                     </div>
                 </div>`;

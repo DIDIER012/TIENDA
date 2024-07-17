@@ -28,7 +28,8 @@ span {
 
 .navbar-nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin-left: auto;
   margin-right: 15px;
   font-size: 40px;

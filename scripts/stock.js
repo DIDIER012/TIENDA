@@ -35,7 +35,7 @@ const productos = [
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
-        img: '../img/buzo 2.webp',
+        img: '../img/buzo2n.webp',
         cantidad: 1
     },
     {
@@ -44,7 +44,7 @@ const productos = [
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
-        img: '../img/buzo 2.webp',
+        img: '../img/buzo3n.webp',
         cantidad: 1
     },
     {
@@ -84,7 +84,7 @@ const productos = [
         cantidad: 1
     },
     {
-        id: 9,
+        id: 10,
         titulo: "Buzo",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -93,7 +93,7 @@ const productos = [
         cantidad: 1
     },
     {
-        id: 9,
+        id: 11,
         titulo: "Buzo",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -102,17 +102,17 @@ const productos = [
         cantidad: 1
     },
     {
-        id: 10,
+        id: 12,
         titulo: "Buzo",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
-        img: '../img/buzo 1.webp',
+        img: '../img/buzo4n.webp',
         cantidad: 1
     },
 
     {
-        id: 11,
+        id: 13,
         titulo: "remera",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -122,7 +122,7 @@ const productos = [
     },
 
     {
-        id: 12,
+        id: 14,
         titulo: "remera",
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -132,7 +132,7 @@ const productos = [
     },
 
     {
-        id: 13,
+        id: 15,
         titulo: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -142,7 +142,7 @@ const productos = [
     },
 
     {
-        id: 14,
+        id: 16,
         titulo: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
@@ -152,7 +152,7 @@ const productos = [
     },
 
     {
-        id: 15,
+        id: 17,
         titulo: "pantalon",
         tipo: "pantalon",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
