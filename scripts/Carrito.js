@@ -14,12 +14,12 @@ const containerCartProducts = document.querySelector(
 btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
-const cartInfo = document.querySelector(".cart-pruduct");
 const mostrar = document.querySelector("#mostrarCarrito");
 const productsList = document.querySelector("#contenedor");
 const valorTotal = document.querySelector(".total-pagar");
 const contador = document.querySelector("#contador-productos");
-
+const cartEmpty = document.querySelector('.cart-empty');
+const cartTotal = document.querySelector('.cart-total')
 
 
 let allProducts = [];
@@ -36,8 +36,22 @@ productsList.addEventListener("click", (evento) => {
             tipo: productoArray.tipo,
 			cantidad: 1
 		}
-		const existencias = allProducts.some(product => product.id  === infoProduct.id)
+		
+		Toastify({
+			text: "AGREGASTE UN NUEVO PRODUCTO AL CARRITO",
+			duration: 1000,
+			newWindow: true,
+			close: true,
+			gravity: "top",
+			position: "right",
+	stopOnFocus: true, 
+	style: {
+		background: "linear-gradient(to right, #00b09b, #96c93d)",
+	},
+	onClick: function(){}
+}).showToast();
 
+const existencias = allProducts.some(product => product.id  === infoProduct.id)
 		if (existencias) {  
             allProducts.forEach(product => {  
                 if (product.id === infoProduct.id) {  
@@ -56,47 +70,29 @@ productsList.addEventListener("click", (evento) => {
 mostrar.addEventListener("click", (e) => {
     if (e.target.classList.contains("icon-close")) {
         const closeProductId = e.target.id;
-		console.log(closeProductId)
         allProducts = allProducts.filter(producto => producto.id !== closeProductId);
         mostrarCarrito();
     }
 });
 
-
 mostrarCarrito = () => {
 	if (!allProducts.length) {
-		containerCartProducts.innerHTML =
-		`<p class="parrafoCarrito">No hay productos seleccionados</p>`;
-		console.log(allProducts);
+		cartEmpty.classList.remove('hidden');
+		cartTotal.classList.remove('hidden');
+		valorTotal.classList.add('hidden-cart');
+	} else {
+		cartEmpty.classList.add('hidden');
+		cartTotal.classList.add('hidden');
+		valorTotal.classList.remove('hidden-cart');
 	}
-
 mostrar.innerHTML = "";
 
 let total = 0;
 let totalProducts = 0;
 
-
-Toastify({
-	text: "AGREGASTE UN NUEVO PRODUCTO",
-	duration: 1000,
-	newWindow: true,
-	close: true,
-	gravity: "top",
-	position: "right",
-	stopOnFocus: true, 
-	style: {
-	background: "linear-gradient(to right, #00b09b, #96c93d)",
-	},
-	onClick: function(){}
-}).showToast();
-
-
-
-
 allProducts.forEach(infoProduct => {
 const containerProducts = document.createElement("div")
 containerProducts.classList.add("cart-product")
-
 
 containerProducts.innerHTML = 
 	`<div class="info-cart-product">
@@ -118,9 +114,7 @@ containerProducts.innerHTML =
 	</svg>
 	</div>
 	`
-
-mostrar.append(containerProducts);
-
+	mostrar.append(containerProducts);
 total = total + parseInt(infoProduct.cantidad * infoProduct.precio);
 totalProducts = totalProducts + infoProduct.cantidad
 });

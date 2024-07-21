@@ -218,6 +218,19 @@ header {
   font-size: 20px;
 }
 
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1500px) {
   #contenedor {
     display: grid;

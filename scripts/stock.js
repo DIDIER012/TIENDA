@@ -2,7 +2,7 @@ const productos = [
     {
         id: 1,
         titulo: "Buzo",
-        tipo: "buzo overzice",
+        tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
         img: '../img/1.jpg',
@@ -35,7 +35,7 @@ const productos = [
         tipo: "buzo",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
-        img: '../img/2.jpg',
+        img: '../img/2241108028-10_1.webp',
         cantidad: 1
     },
 
@@ -122,7 +122,7 @@ const productos = [
     {
         id: 13,
         titulo: "remera",
-        tipo: "buzo",
+        tipo: "remera",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
         img: '../img/5.jpg',
@@ -132,7 +132,7 @@ const productos = [
     {
         id: 14,
         titulo: "remera",
-        tipo: "buzo",
+        tipo: "remera",
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
         img: '../img/6.jpg',
@@ -166,6 +166,15 @@ const productos = [
         desc: "Disponible en todos los talles, desde XS hasta XXL.",
         precio: 50000,
         img: '../img/9.jpg',
+        cantidad: 1
+    },
+    {
+        id: 18,
+        titulo: "buzo",
+        tipo: "buzo",
+        desc: "Disponible en todos los talles, desde XS hasta XXL.",
+        precio: 50000,
+        img: '../img/id 18.webp',
         cantidad: 1
     },
 ];
