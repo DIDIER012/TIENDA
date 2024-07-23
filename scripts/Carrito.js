@@ -4,8 +4,6 @@ const carritoStorage = () => {
 	
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const btnCart = document.querySelector('#carritoHidden');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
@@ -19,8 +17,8 @@ const productsList = document.querySelector("#contenedor");
 const valorTotal = document.querySelector(".total-pagar");
 const contador = document.querySelector("#contador-productos");
 const cartEmpty = document.querySelector('.cart-empty');
-const cartTotal = document.querySelector('.cart-total')
-
+const button = document.querySelector('#button')
+const buttonVaciar = document.querySelector('#vaciar')
 
 let allProducts = [];
 
@@ -47,6 +45,7 @@ productsList.addEventListener("click", (evento) => {
 	stopOnFocus: true, 
 	style: {
 		background: "linear-gradient(to right, #00b09b, #96c93d)",
+		borderRadius: "1rem"
 	},
 	onClick: function(){}
 }).showToast();
@@ -78,12 +77,12 @@ mostrar.addEventListener("click", (e) => {
 mostrarCarrito = () => {
 	if (!allProducts.length) {
 		cartEmpty.classList.remove('hidden');
-		cartTotal.classList.remove('hidden');
-		valorTotal.classList.add('hidden-cart');
+		button.classList.add('d-none');
+		valorTotal.classList.add('hidden');
 	} else {
 		cartEmpty.classList.add('hidden');
-		cartTotal.classList.add('hidden');
-		valorTotal.classList.remove('hidden-cart');
+		button.classList.remove('d-none');
+		valorTotal.classList.remove('hidden');
 	}
 mostrar.innerHTML = "";
 

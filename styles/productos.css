@@ -207,15 +207,11 @@ header {
   display: none;
 }
 
-.parrafoCarrito {
-  padding: 20px;
-  text-align: center;
-}
-
 .total-pagar {
   font-weight: bolder;
   color: #000;
   font-size: 20px;
+  margin-right: 30px;
 }
 
 .cart-empty {
@@ -225,6 +221,16 @@ header {
   font-size: 25px;
   font-weight: bold;
   margin-top: -40px;
+}
+
+.btn-custom {
+  background-color: #272626;
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: gray;
 }
 
 .hidden {
